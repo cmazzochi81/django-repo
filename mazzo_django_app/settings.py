@@ -142,9 +142,9 @@ EMAIL_HOST_PASSWORD = 'kffyoiahntuhwdmv'
 #EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 #EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
-AWS_ACCESS_KEY_ID=os.environ.get('AKIA22GH7JT3WWBNVGRJ')
-AWS_SECRET_ACCESS_KEY=os.environ.get('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')
-AWS_STORAGE_BUCKET_NAME=os.environ.get('mazzo-django-blog-files')
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID='AKIA22GH7JT3WWBNVGRJ'
+AWS_SECRET_ACCESS_KEY='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'
+AWS_STORAGE_BUCKET_NAME='mazzo-django-blog-files'
+AWS_S3_FILE_OVERWRITE =False
+AWS_DEFAULT_ACL =None
+DEFAULT_FILE_STORAGE ='storages.backends.s3boto3.S3Boto3Storage'
