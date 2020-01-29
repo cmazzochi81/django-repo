@@ -1,0 +1,33 @@
+What is JSX? JavaScript as XML, allows usage of HTML tags directly in the JavaScript, in the render function. 
+
+Why is using JSX better than create element? Using create element can lead to bugs due to a lot of punctuation, a
+as well as potential nesting issues. 
+
+Have to use 'className' as the name of the attribute on a JSX element to include a CSS class. 
+
+What is a component? It is a function that returns an element or a UI interface.   (Equivalent in Django is the views.py file). 
+
+You can use parenthesis () around the return value of function. You can use curly braces {} but if so, 
+must use a return statement. 
+
+Component's name, must be capitalized first letter.   
+
+'Props' is an object that contains the properties of the component. You can display dynamic data within a component. 
+
+Props are always passed into component functions. 
+
+You pass in property values in the JSX element in the render function
+
+Destructured means 'props', the properties or specific properties are passed in. 
+
+Use state with events to change the entire application. 
+
+attribute property functions like onClick={this.login} on a button is how you attach functionality to 
+UI elements. 
+
+State variables are changed by the functions. 
+
+Use the map function to iterate or map over a const array list. 
+
+When redering a list give each list item a key so React can re-render the list properly. Insert value 'i'
+set the value of the key to 'i'. 

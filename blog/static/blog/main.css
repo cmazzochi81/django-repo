@@ -12,6 +12,12 @@ ul {
   margin: 0;
 }
 
+.field label {
+  font-weight: bold;
+  margin-right:1%;
+}
+
+
 .bg-steel {
   background-color: #5f788a;
 }

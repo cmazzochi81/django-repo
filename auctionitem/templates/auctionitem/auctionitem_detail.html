@@ -1,0 +1,59 @@
+{% extends "blog/base.html" %}
+
+
+{% block content %}
+ <article class="media content-section">
+      <img class="rounded-circle article-img" src="{{object.seller.profile.image.url}}">
+
+      <div class="media-body">
+
+        <div class="article-metadata">
+
+          <p class="field">
+          <label>Title: </label><span>{{ object.title }}</span>
+        </p>
+          <img style="float:right;" class="article-img" src="{{auctionitem.image.url}}">
+
+          <p class="field">
+          <label>Seller: </label><a class="mr-2" href="{% url 'user-auctionitems' object.seller.username %}">{{ object.seller }}</a></p>
+
+          <!-- <p class="field">
+          <label>Date Posted: <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small></p> -->
+
+          <p class="field">
+          <label>Start Date: </label><small class="text-muted">{{ object.startDate }}</small></p>
+
+          <p class="field">
+          <label>End Date: </label><small class="text-muted">{{ object.endDate }}</small></p>
+
+           <!--  {{object.setDaysRemaining}} -->
+
+
+           
+          <p class="field">
+          <label>Days Remaining: </label><small class="text-muted">{{ object.daysRemaining }}</small></p>
+
+          <p class="field">
+          <label>Description: </label>{{object.description}}</p>
+
+          <p class="field">
+          <label>Start Bid: </label>{{object.startBid}}</p>
+
+          <p class="field">
+          <label>Buy Now Price: </label>{{object.buyNowPrice}}</p>
+
+        <p class="field">
+         <!--  {{object.incrementViewCount}} -->
+          <label>Viewed: </label>{{object.viewCount}}
+        </p>
+
+       {% if object.seller == user %}
+          <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'auctionitem-update' object.id %}">Update</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'auctionitem-delete' object.id %}">Delete</a>
+          </div>
+            
+          {% endif %}
+      </div><!--End media-body div -->
+    </article>
+{% endblock content %}

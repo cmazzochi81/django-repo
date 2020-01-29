@@ -16,7 +16,7 @@
  {% if title %}
   	<title>Mazzo Blog - {{title}}</title>
   {% else %}
-  	<title>Mazzo Blog Home</title>
+  	<title>Mazzo Blog House</title>
   {% endif %}
   
 </head>
@@ -28,7 +28,7 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
 
         <div class="container">
-
+              <!--blog-home the name given to the url pattern-->
           <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Django Blog</a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,6 +41,7 @@
             <div class="navbar-nav mr-auto">
               <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
               <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+              <a class="nav-item nav-link" href="{% url 'auctionitem-list' %}">Auction</a>
             </div>
 
             <!-- Navbar Right Side -->
