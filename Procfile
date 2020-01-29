@@ -1,0 +1,1 @@
+web: gunicorn mazzo_django_app.wsgi
