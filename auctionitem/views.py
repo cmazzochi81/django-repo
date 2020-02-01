@@ -9,8 +9,7 @@ from django.views.generic import (
 		DetailView, 
 		CreateView,
 		UpdateView,
-		DeleteView,
-		
+		DeleteView
 		)
 
 from .models import AuctionItem
@@ -47,7 +46,7 @@ class AuctionItemCreateView(LoginRequiredMixin, CreateView):
 class AuctionItemUpdateView(LoginRequiredMixin,UpdateView):
 	model = AuctionItem
 	fields = ['title', 'description', 'startBid', 'buyNowPrice', 'buyNowEnabled', 'startDate', 'deliveryCost', 'seller']
-
+	success_url ='/'
 
 	def form_valid(self,form):
 		form.instance.seller = self.request.user
@@ -64,7 +63,7 @@ class AuctionItemDeleteView(LoginRequiredMixin,UserPassesTestMixin, DeleteView):
 	success_url ='/'
 
 	def test_func(self):
-			post = self.get_object()
-			if self.request.user == auctionitem.seller:
-				return True
-			return False
+		auctionitem = self.get_object()
+		if self.request.user == auctionitem.seller:
+			return True
+		return False

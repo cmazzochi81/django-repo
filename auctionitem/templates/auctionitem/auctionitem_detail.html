@@ -50,6 +50,7 @@
        {% if object.seller == user %}
           <div>
             <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'auctionitem-update' object.id %}">Update</a>
+            
             <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'auctionitem-delete' object.id %}">Delete</a>
           </div>
             

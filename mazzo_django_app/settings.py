@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7mr-4@%*#p(!_$7_m5-ucv$cmf(@qadf42v-zlx2cklsk=it%1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['mazzodjangoapp.herokuapp.com']
+#ALLOWED_HOSTS = ['mazzodjangoapp.herokuapp.com']
 
 
 # Application definition
@@ -148,3 +148,5 @@ AWS_STORAGE_BUCKET_NAME='mazzo-django-blog-files'
 AWS_S3_FILE_OVERWRITE =False
 AWS_DEFAULT_ACL =None
 DEFAULT_FILE_STORAGE ='storages.backends.s3boto3.S3Boto3Storage'
+
+# aws s3 ls  http://mazzo-php-app.s3-website-us-west-2.amazonaws.com
