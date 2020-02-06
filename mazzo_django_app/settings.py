@@ -24,7 +24,7 @@ SECRET_KEY = '7mr-4@%*#p(!_$7_m5-ucv$cmf(@qadf42v-zlx2cklsk=it%1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ['mazzodjangoapp.herokuapp.com']
+ALLOWED_HOSTS = ['mazzodjangoapp.herokuapp.com']
 
 
 # Application definition
