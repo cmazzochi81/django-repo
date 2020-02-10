@@ -1,7 +1,6 @@
 {% extends "blog/base.html" %}
-
-
 {% block content %}
+ {% if object.seller == user %}
  <article class="media content-section">
       <img class="rounded-circle article-img" src="{{object.seller.profile.image.url}}">
 
@@ -27,8 +26,6 @@
           <label>End Date: </label><small class="text-muted">{{ object.endDate }}</small></p>
 
            <!--  {{object.setDaysRemaining}} -->
-
-
            
           <p class="field">
           <label>Days Remaining: </label><small class="text-muted">{{ object.daysRemaining }}</small></p>
